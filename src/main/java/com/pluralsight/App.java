@@ -29,6 +29,12 @@ public class App {
         command = Scanner.nextInt();
         Scanner.nextLine();
 
+        switch (command) {
+            case 1 -> listAllVehicles(vehicles);
+            case 5 -> System.out.println("goodbye");
+            default -> System.out.println("Invalid command, please try again.");
+        }
+
 
 
         listAllVehicles(vehicles);
