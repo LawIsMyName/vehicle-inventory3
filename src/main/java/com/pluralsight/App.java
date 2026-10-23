@@ -5,12 +5,16 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
 
+
         Scanner Scanner = new Scanner(System.in);
 
+        // call the array from the method
         Vehicle[] vehicles = createVehicles();
 
+        // add variable as a placeholder at 0
         int  command = 0;
 
+        // add while loop to display menu until the user inputs 5
         while (command != 5) {
 
             System.out.println("""
@@ -27,6 +31,8 @@ public class App {
             System.out.println("Enter your choice: ");
             command = Scanner.nextInt();
             Scanner.nextLine();
+
+            // add switch statement to create cases where we call on methods to search for vehicles
             switch (command) {
 
                 case (1) -> listAllVehicles(vehicles);
@@ -40,6 +46,7 @@ public class App {
 
     }
 
+    // add method to search for vehicles by make & model
     public static void findVehiclesByColor(Vehicle[] vehicles, Scanner scanner) {
 
         System.out.print("Enter vehicle color: ");
@@ -55,6 +62,7 @@ public class App {
         }
     }
 
+    // add method to search for vehicles by price range
     private static void findVehiclesByPriceRange(Vehicle[] vehicles, Scanner scanner) {
 
         System.out.print("Enter minimum price: ");
@@ -76,6 +84,7 @@ public class App {
         }
     }
 
+    // add method to search for vehicles by make & model
     private static void findVehiclesByMakeModel(Vehicle[] vehicles, Scanner scanner) {
 
         System.out.print("Enter make/model: ");
@@ -91,6 +100,7 @@ public class App {
         }
     }
 
+    // add method to create array and information inside
     private static Vehicle[] createVehicles() {
         Vehicle[] vehicles = new Vehicle[20];
 
@@ -103,6 +113,7 @@ public class App {
         return vehicles;
     }
 
+    // add method for 2 different types of for loops that way all info is printed
     public static void listAllVehicles(Vehicle[] vehicles){
         for (Vehicle vehicle : vehicles) {
             System.out.println(vehicle);
