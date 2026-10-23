@@ -14,6 +14,8 @@ public class App {
 
         int i = 6;
 
+        System.out.println(vehicles[0]);
+
 
 
     }
