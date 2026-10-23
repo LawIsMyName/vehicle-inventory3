@@ -12,14 +12,11 @@ public class App {
         vehicles[4] = new Vehicle(101125, "Nissan Altima", "Silver", 39000, 14800);
         vehicles[5] = new Vehicle(101126, "Jeep Wrangler", "Green", 61000, 22500);
 
-        int i = 6;
+        int count = 6;
 
-        System.out.println(vehicles[0]);
-        System.out.println(vehicles[1]);
-        System.out.println(vehicles[2]);
-        System.out.println(vehicles[3]);
-        System.out.println(vehicles[4]);
-        System.out.println(vehicles[5]);
+        for (int i = 0; i < vehicles.length; i++) {
+            System.out.println(vehicles[i]);
+        }
 
 
     }
