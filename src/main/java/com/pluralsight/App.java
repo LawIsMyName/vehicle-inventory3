@@ -32,7 +32,7 @@ public class App {
         switch (command) {
             case 1 -> listAllVehicles(vehicles);
             case 2 -> findVehiclesByMakeModel(vehicles, Scanner);
-            case 3 -> findVehiclesBypriceRange(vehicles, Scanner);
+            case 3 -> findVehiclesByPriceRange(vehicles, Scanner);
             case 5 -> System.out.println("goodbye");
             default -> System.out.println("Invalid command, please try again.");
         }
@@ -41,6 +41,29 @@ public class App {
 
         listAllVehicles(vehicles);
     }
+
+    private static void findVehiclesByPriceRange(Vehicle[] vehicles, Scanner scanner) {
+
+        System.out.print("Enter minimum price: ");
+        double min = scanner.nextDouble();
+        scanner.nextLine();
+
+        System.out.print("Enter maximum price: ");
+        double max = scanner.nextDouble();
+        scanner.nextLine();
+
+        for (Vehicle currentVehicle : vehicles) {
+
+            if (currentVehicle != null &&
+                    currentVehicle.getPrice() >= min &&
+                    currentVehicle.getPrice() <= max) {
+
+                System.out.println(currentVehicle);
+            }
+        }
+    }
+
+
     private static void findVehiclesByMakeModel(Vehicle[] vehicles, Scanner scanner) {
 
         System.out.print("Enter make/model: ");
