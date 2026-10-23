@@ -23,6 +23,7 @@ public class App {
                     5 - Quit
                     ========================
                     """);
+
             System.out.println("Enter your choice: ");
             command = Scanner.nextInt();
             Scanner.nextLine();
@@ -32,6 +33,7 @@ public class App {
             case 1 -> listAllVehicles(vehicles);
             case 2 -> findVehiclesByMakeModel(vehicles, Scanner);
             case 3 -> findVehiclesByPriceRange(vehicles, Scanner);
+            case 4 -> findVehiclesByColor(vehicles, Scanner);
             case 5 -> System.out.println("goodbye");
             default -> System.out.println("Invalid command, please try again.");
         }
