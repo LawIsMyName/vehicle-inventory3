@@ -27,20 +27,17 @@ public class App {
             System.out.println("Enter your choice: ");
             command = Scanner.nextInt();
             Scanner.nextLine();
+            switch (command) {
+
+                case (1) -> listAllVehicles(vehicles);
+                case (2) -> findVehiclesByMakeModel(vehicles, Scanner);
+                case (3) -> findVehiclesByPriceRange(vehicles, Scanner);
+                case (4) -> findVehiclesByColor(vehicles, Scanner);
+                case (5) -> System.out.println("goodbye");
+                default -> System.out.println("Invalid command, please try again.");
+            }
         }
 
-        switch (command) {
-            case 1 -> listAllVehicles(vehicles);
-            case 2 -> findVehiclesByMakeModel(vehicles, Scanner);
-            case 3 -> findVehiclesByPriceRange(vehicles, Scanner);
-            case 4 -> findVehiclesByColor(vehicles, Scanner);
-            case 5 -> System.out.println("goodbye");
-            default -> System.out.println("Invalid command, please try again.");
-        }
-
-
-
-        listAllVehicles(vehicles);
     }
 
     public static void findVehiclesByColor(Vehicle[] vehicles, Scanner scanner) {
@@ -57,7 +54,6 @@ public class App {
             }
         }
     }
-
 
     private static void findVehiclesByPriceRange(Vehicle[] vehicles, Scanner scanner) {
 
@@ -79,7 +75,6 @@ public class App {
             }
         }
     }
-
 
     private static void findVehiclesByMakeModel(Vehicle[] vehicles, Scanner scanner) {
 
