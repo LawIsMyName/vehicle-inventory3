@@ -14,7 +14,7 @@ public class App {
 
         int count = 6;
 
-        for (int i = 0; i < vehicles.length; i++) {
+        for (int i = 0; i < count; i++) {
             System.out.println(vehicles[i]);
         }
 
