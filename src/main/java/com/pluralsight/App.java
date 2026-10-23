@@ -43,6 +43,22 @@ public class App {
         listAllVehicles(vehicles);
     }
 
+    public static void findVehiclesByColor(Vehicle[] vehicles, Scanner scanner) {
+
+        System.out.print("Enter vehicle color: ");
+        String color = scanner.nextLine();
+
+        for (Vehicle currentVehicle : vehicles) {
+
+            if (currentVehicle != null &&
+                    currentVehicle.getColor().equalsIgnoreCase(color)) {
+
+                System.out.println(currentVehicle);
+            }
+        }
+    }
+
+
     private static void findVehiclesByPriceRange(Vehicle[] vehicles, Scanner scanner) {
 
         System.out.print("Enter minimum price: ");
