@@ -23,11 +23,10 @@ public class App {
                     5 - Quit
                     ========================
                     """);
+            System.out.println("Enter your choice: ");
+            command = Scanner.nextInt();
+            Scanner.nextLine();
         }
-
-        System.out.println("Enter your choice: ");
-        command = Scanner.nextInt();
-        Scanner.nextLine();
 
         switch (command) {
             case 1 -> listAllVehicles(vehicles);
