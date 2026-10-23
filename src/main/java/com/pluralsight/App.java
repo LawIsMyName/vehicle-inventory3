@@ -25,6 +25,12 @@ public class App {
                     """);
         }
 
+        System.out.println("Enter your choice: ");
+        command = Scanner.nextInt();
+        Scanner.nextLine();
+
+
+
         listAllVehicles(vehicles);
     }
 
