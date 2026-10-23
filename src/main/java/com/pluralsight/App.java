@@ -31,6 +31,8 @@ public class App {
 
         switch (command) {
             case 1 -> listAllVehicles(vehicles);
+            case 2 -> findVehiclesByMakeModel(vehicles, Scanner);
+
             case 5 -> System.out.println("goodbye");
             default -> System.out.println("Invalid command, please try again.");
         }
@@ -38,6 +40,20 @@ public class App {
 
 
         listAllVehicles(vehicles);
+    }
+    private static void findVehiclesByMakeModel(Vehicle[] vehicles, Scanner scanner) {
+
+        System.out.print("Enter make/model: ");
+        String makeModel = scanner.nextLine();
+
+        for (Vehicle currentVehicle : vehicles) {
+
+            if (currentVehicle != null &&
+                    currentVehicle.getMakeModel().equalsIgnoreCase(makeModel)) {
+
+                System.out.println(currentVehicle);
+            }
+        }
     }
 
     private static Vehicle[] createVehicles() {
