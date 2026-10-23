@@ -17,6 +17,20 @@ public class App {
 
         int  command = 0;
 
+        while (command != 5) {
+
+            System.out.println("""
+                    
+                    ===== VEHICLE MENU =====
+                    1 - List all vehicles
+                    2 - Search by make/model
+                    3 - Search by price range
+                    4 - Search by color
+                    5 - Quit
+                    ========================
+                    """);
+        }
+
         listOfVehicles(vehicles);
     }
     public static void listOfVehicles(Vehicle[] vehicles){
