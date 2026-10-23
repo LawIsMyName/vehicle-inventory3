@@ -15,7 +15,11 @@ public class App {
         int i = 6;
 
         System.out.println(vehicles[0]);
-
+        System.out.println(vehicles[1]);
+        System.out.println(vehicles[2]);
+        System.out.println(vehicles[3]);
+        System.out.println(vehicles[4]);
+        System.out.println(vehicles[5]);
 
 
     }
