@@ -32,7 +32,7 @@ public class App {
         switch (command) {
             case 1 -> listAllVehicles(vehicles);
             case 2 -> findVehiclesByMakeModel(vehicles, Scanner);
-            case 3 ->
+            case 3 -> findVehiclesBypriceRange(vehicles, Scanner);
             case 5 -> System.out.println("goodbye");
             default -> System.out.println("Invalid command, please try again.");
         }
