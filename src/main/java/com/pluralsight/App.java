@@ -12,15 +12,20 @@ public class App {
         vehicles[4] = new Vehicle(101125, "Nissan Altima", "Silver", 39000, 14800);
         vehicles[5] = new Vehicle(101126, "Jeep Wrangler", "Green", 61000, 22500);
 
+        listOfVehicles(vehicles);
+    }
+    public static void listOfVehicles(Vehicle[] vehicles){
+
         int count = 6;
 
         for (int i = 0; i < count; i++) {
             System.out.println(vehicles[i]);
         }
 
-
     }
-
-
-
 }
+
+
+
+
+
