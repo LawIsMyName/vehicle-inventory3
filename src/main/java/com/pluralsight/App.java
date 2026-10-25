@@ -116,13 +116,12 @@ public class App {
     // add method for 2 different types of for loops that way all info is printed
     public static void listAllVehicles(Vehicle[] vehicles){
         for (Vehicle vehicle : vehicles) {
-            System.out.println(vehicle);
-        }
-        //        int count = 6;
 
-//        for (int i = 0; i < count; i++) {
-//            System.out.println(vehicles[i]);
-//        }
+            if (vehicle != null) {
+                System.out.println(vehicle);
+            }
+        }
+
     }
 }
 
